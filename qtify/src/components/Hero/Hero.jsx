@@ -1,6 +1,6 @@
 import React from "react";
-import Styles from "./HeroSection.module.css";
-import { ReactComponent as VibratingHeadphone } from "../../assets/VibratingHeadphone.png";
+import Styles from "./Hero.module.css";
+import { ReactComponent as VibratingHeadphone } from "../../assets/vibratingheadphone.svg";
 
 const Hero = () => {
   return (

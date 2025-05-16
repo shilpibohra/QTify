@@ -1,10 +1,10 @@
 import React from "react";
 
-import styles from "./NavBar.module.css";
+import styles from "./Navbar.module.css";
 import { Button } from "../Button/Button";
 import Logo from "../Logo/Logo";
 import Search from "../Search/Search";
-const NavBar = () => {
+const Navbar = () => {
   return (
     <nav className={styles.navBar}>
       <Logo/>
@@ -14,4 +14,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
+export default Navbar;

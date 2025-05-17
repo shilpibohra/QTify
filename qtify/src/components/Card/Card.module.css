@@ -1,76 +1,40 @@
-.cardContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 6px;
-    width: 159px;
-    height: 205px;
-    flex-shrink: 0;
-    background-color: #fff;
-    border-radius: 0.7rem;
+.card {
+    width: 160px;
+    height: 235px;
   }
-  .cardFollowersCount {
-    display: inline-flex;
-    padding: 4px 8px;
-    align-items: flex-start;
-    gap: 1px;
-    background: #121212;
-    border-radius: 10px;
-    margin-left: 6px;
-    color: #fff;
-    font-family: Poppins;
+  
+  .cardImg {
+    width: 160px;
+    height: 208px;
+    background-color: var(--white-color);
+    border-radius: 15px 15px 10px 10px;
+  }
+  
+  .cardImg img {
+    width: inherit;
+    height: 170px;
+    object-fit: fill;
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .cardImg p {
+    display: inline-block;
+    height: 23px;
     font-size: 10px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+    background-color: var(--black-color);
+    border-radius: 10px;
+    padding: 5px;
+    margin-left: 10px;
   }
-  .cardTitle {
-    color: #fff;
-    font-family: Poppins;
+  
+  .card div h3 {
     font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    margin-top: 6px;
-    width: 159px;
+    font-weight: 500;
+    margin-top: 5px;
   }
-  .wrapper{
-      width: 160px;
-    
-  }
-  img,svg{
-    display: block;
-    max-width: 100%;
-  }
-  .card{
-      position: relative;
-      width:160px;
-      height: 205px;
-      border-radius: 10px;
-      overflow: hidden;
-      
-  }
-  .banner{
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 100%;
-      height: 42px;
-      display: flex;
-      align-items: center;
-      padding: 6px;
-      background-color: #fff;
-      .chip{
-          background-color: #121212;
-          color: #fff;
-      }
-  }
-  .chip{
-      background-color: #121212;
-      color: #fff;
-  }
-  .titleWrapper{
-      margin-top: 6px;
-      overflow: hidden;
-      text-overflow: ellipsis;
+  
+  @media (max-width: 600px) {
+    .card {
+      width: 150px;
+    }
   }

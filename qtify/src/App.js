@@ -4,7 +4,7 @@ import React from "react";
 import Hero from "./components/Hero/Hero";
 import { useEffect, useState } from "react";
 import { fetchTopAlbums } from "./api/api";
-import styles from "./App.module.css";
+import "./App.css";
 import Section from "../src/components/Section/Section";
 import Tabs from "../src/components/Tabs/Tabs";
 import Faqs from "./components/Faqs/Faqs";

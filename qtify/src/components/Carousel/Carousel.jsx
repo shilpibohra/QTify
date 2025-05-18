@@ -1,10 +1,11 @@
 import React, { useEffect } from "react";
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
+import { Navigation } from 'swiper/modules';
 import "swiper/css";
-import { Navigation } from "swiper";
-import CarsouselLeftNavigation from "./CarsouselLeftNavigation/CarsouselLeftNavigation";
-import CarsouselRightNavigation from "./CarsouselRightNavigation/CarsouselRightNavigation";
-import styles from "./Carsousel.module.css";
+//import { Navigation } from "swiper";
+import CarouselLeftNavigation from "./CarouselLeftNavigation/CarouselLeftNavigation";
+import CarouselRightNavigation from "./CarouselRightNavigation/CarouselRightNavigation";
+import styles from "./Carousel.module.css";
 import { red } from "@mui/material/colors";
 const Controls = () => {
   const swiper = useSwiper();
@@ -12,7 +13,7 @@ const Controls = () => {
     swiper.slideTo(0);
   }, [data]); */
 };
-const Carsousel = ({ data, component }) => {
+const Carousel = ({ data, component }) => {
   return (
     <div className={styles.wrapper}>
       <Swiper
@@ -26,8 +27,8 @@ const Carsousel = ({ data, component }) => {
         <h1>hi </h1>
         <Controls data={data} />
         <div className={styles.arrow}>
-          <CarsouselLeftNavigation />
-          <CarsouselRightNavigation />
+          <CarouselLeftNavigation />
+          <CarouselRightNavigation />
         </div>
         {data.data.map((item) => {
           return <SwiperSlide>{component(item)}</SwiperSlide>;
@@ -36,4 +37,4 @@ const Carsousel = ({ data, component }) => {
     </div>
   );
 };
-export default Carsousel;
+export default Carousel;

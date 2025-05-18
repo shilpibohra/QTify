@@ -1,6 +1,6 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
-import Tab  from '@mui/material';
+import { Tabs, Tab } from '@mui/material';
 import TabContext from "@mui/lab/TabContext";
 import TabList from "@mui/lab/TabList";
 import TabPanel from "@mui/lab/TabPanel";
@@ -9,7 +9,7 @@ import styles from "../../components/Section/Section.module.css";
 import { fetchTopAlbums, fetchTopSongs } from "../../api/api";
 import Card from "../Card/Card";
 
-export default function Tabs() {
+export default function Tab1() {
     const [value, setValue] = React.useState('1');
 
   const handleChange = (event, newValue) => {

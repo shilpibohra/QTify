@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Button from "../Button/Button";
 import Logo from "../Logo/Logo";
-import SearchBar from "../SearchBar/Search";
+import Search from "../Search/Search";
 import styles from "./Navbar.module.css";
 
 import ModelNew from "../Model/Model";
@@ -15,7 +15,7 @@ const Navbar = () => {
     <>
       <nav className="navbar">
         <Logo />
-        <SearchBar />
+        <Search />
         <ModelNew val={open} className="button" onClick={handleClick} />
         {/* <Button text="Give Feedback" type="button" onClick={handleClick} /> */}
       </nav>

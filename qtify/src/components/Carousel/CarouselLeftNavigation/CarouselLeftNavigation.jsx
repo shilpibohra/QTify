@@ -1,22 +1,22 @@
 import React, { useEffect, useState } from "react";
 import { useSwiper, useSwiperSlide } from "swiper/react";
 import { ReactComponent as LeftArrow } from "../../../assests/leftnav.svg";
-import styles from "./CarsouselLeftNavigation.module.css";
+import styles from "./CarouselLeftNavigation.module.css";
 
-const CarsouselLeftNavigation = () => {
+const CarouselLeftNavigation = () => {
   const swiper = useSwiper();
-  const [isBegining, setIsBegining] = useState(swiper.isBegining);
+  const [isBeginning, setIsBeginning] = useState(swiper.isBeginning);
 
   useEffect(() => {
     swiper.on("slideChange", function () {
-      setIsBegining(swiper.isBeginning);
+      setIsBeginning(swiper.isBeginning);
     });
   }, []);
 
   return (
-    <div className={styles.CarsouselLeftNavigation}>
-      {!isBegining && <LeftArrow onClick={() => swiper.slidePrev()} />}
+    <div className={styles.CarouselLeftNavigation}>
+      {!isBeginning && <LeftArrow onClick={() => swiper.slidePrev()} />}
     </div>
   );
 };
-export default CarsouselLeftNavigation;
+export default CarouselLeftNavigation;

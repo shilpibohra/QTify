@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useSwiper, useSwiperSlide } from "swiper/react";
 import { ReactComponent as RightArrow } from "../../../assests/rightnav.svg";
-import styles from "./CarsouselRightNavigation.module.css";
+import styles from "./CarouselRightNavigation.module.css";
 
-const CarsouselRightNavigation = () => {
+const CarouselRightNavigation = () => {
   const swiper = useSwiper();
   const [isEnd, setIsEnd] = useState(swiper.isEnd);
 
@@ -14,9 +14,9 @@ const CarsouselRightNavigation = () => {
   }, []);
 
   return (
-    <div className={styles.CarsouselRightNavigation}>
+    <div className={styles.CarouselRightNavigation}>
       {!isEnd && <RightArrow onClick={() => swiper.slideNext()} />}
     </div>
   );
 };
-export default CarsouselRightNavigation;
+export default CarouselRightNavigation;

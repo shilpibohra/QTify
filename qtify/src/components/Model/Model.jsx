@@ -5,7 +5,7 @@ import Modal from "@mui/material/Modal";
 import Fade from "@mui/material/Fade";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import styles from "./Model.css";
+import styles from "./Model.module.css";
 
 const style = {
   position: "absolute",

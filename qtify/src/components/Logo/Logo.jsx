@@ -1,6 +1,11 @@
-import React from "react";
-import logo from "../../assest/BrandLogo.png";
+import React from 'react'
+import BrandLogo from "../../assets/BrandLogo.png"
+const Logo = () => {
+  return (
+    <div>
+        <img src={BrandLogo} alt='logo' width={67} />
+        </div>
+  )
+}
 
-const Logo = () => <img src={logo} alt="logo" />;
-
-export default Logo;
+export default Logo

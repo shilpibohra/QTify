@@ -1,41 +1,23 @@
-import Logo from "../Logo/Logo";
-import Search from "../Search/Search";
+import React, { useState } from "react";
 import Button from "../Button/Button";
-import { useEffect, useState } from "react";
-import Feedback from "../Feedback/Feedback";
-import styles from "./navbar.module.css";
+import Logo from "../Logo/Logo";
+import SearchBar from "../SearchBar/Search";
+import styles from "./Navbar.module.css";
 
-const Navbar = ({ data, page, songsData }) => {
-  const [isFeedbackClicked, setIsFeedbackClicked] = useState(false);
+import ModelNew from "../Model/Model";
 
+const Navbar = () => {
+  const [open, setOpen] = useState(false);
   const handleClick = () => {
-    setIsFeedbackClicked(!isFeedbackClicked);
+    setOpen(true);
   };
-
-  useEffect(() => {
-    let feedback = document.getElementById("feedback");
-    let body = document.body;
-    if (isFeedbackClicked) {
-      body.style.overflowY = "hidden";
-      feedback?.classList.add("feedbackClicked");
-    } else {
-      body.style.overflowY = "auto";
-      feedback?.classList.remove("feedbackClicked");
-    }
-  }, [isFeedbackClicked]);
-
   return (
     <>
-      {isFeedbackClicked && (
-        <Feedback onClose={() => setIsFeedbackClicked(false)} />
-      )}
-      <nav className={styles.nav}>
+      <nav className="navbar">
         <Logo />
-        <Search data={page === "home" ? data : songsData} page={page} />
-        <Button
-          text="GIVE FEEDBACK"
-          eventHandler={{ event: "onClick", handler: handleClick }}
-        />
+        <SearchBar />
+        <ModelNew val={open} className="button" onClick={handleClick} />
+        {/* <Button text="Give Feedback" type="button" onClick={handleClick} /> */}
       </nav>
     </>
   );

@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./Hero.module.css";
+import { ReactComponent as VibratingHeadphone } from "../../assets/vibratingheadphone.svg";
 
 function Hero() {
     return (
@@ -8,9 +9,7 @@ function Hero() {
                 <h1>100 Thousand Songs, ad-free</h1>
                 <h1>Over thousands podcast episodes</h1>
             </div>
-            <div>
-                <img src={require("../../assets/vibratingheadphone.svg")} width={112} alt="headphones" />
-            </div>
+            <VibratingHeadphone />
         </div>
     )
 }

@@ -1,35 +1,19 @@
-import { useState } from "react";
-//import searchIcon from "../../assets/searchIcon.svg";
+import React from "react";
 import styles from "./Search.module.css";
-//import navbarStyles from "../Navbar/Navbar.module.css";
+import { ReactComponent as SearchIcon } from "../../assets/searchIcon.svg";
 
-import { ReactComponent as SearchIcon } from "../../assests/searchIcon.svg";
+function Search({ placeholder }) {
+    const onSubmit = (e) => {
+        e.preventDefault();
+    }
+    return (
+        <form className={styles.wrapper} onSubmit={onSubmit}>
+            <input className={styles.search} placeholder={placeholder} required />
+            <button className={styles.searchButton} type="submit">
+                <SearchIcon/>
+            </button>
+        </form>
+    )
+}
 
-
-const SearchBar = ({ placeholder }) => {
-  const [value, setValue] = useState(null);
-  const onSubmit = (e) => {
-    e.preventDefault();
-  };
-  const handleChange = (e) => {
-    setValue(e.target.value);
-  };
-  return (
-    <>
-      <form className="wrapper" onSubmit={onSubmit}>
-        <input
-          className="search"
-          placeholder={placeholder}
-          required
-          value={value}
-          onChange={handleChange}
-        />
-        <button className="search-btn" type="submit">
-          {<SearchIcon />}{" "}
-        </button>
-      </form>
-    </>
-  );
-};
-
-export default SearchBar;
+export default Search;

@@ -1,26 +1,23 @@
-import React, { useState } from "react";
-import Button from "../Button/Button";
+import React from "react";
 import Logo from "../Logo/Logo";
 import Search from "../Search/Search";
+import Button from "../Button/Button";
 import styles from "./Navbar.module.css";
+import { Link } from "react-router-dom";
 
-import ModelNew from "../Model/Model";
-
-const Navbar = () => {
-  const [open, setOpen] = useState(false);
-  const handleClick = () => {
-    setOpen(true);
-  };
-  return (
-    <>
-      <nav className="navbar">
-        <Logo />
-        <Search />
-        <ModelNew val={open} className="button" onClick={handleClick} />
-        {/* <Button text="Give Feedback" type="button" onClick={handleClick} /> */}
-      </nav>
-    </>
-  );
-};
+function Navbar({ searchData }) {
+    return (
+        <nav className={styles.navbar}>
+            <Link to="/">
+                <Logo/>
+            </Link>
+            <Search
+                placeholder={"Search a song of your choice"}
+                searchData={searchData}
+            />
+            <Button>Give Feedback</Button>
+        </nav>
+    )
+}
 
 export default Navbar;
